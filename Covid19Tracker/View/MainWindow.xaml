@@ -21,7 +21,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Canvas Grid.Row="0">
-            <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=Main}" Canvas.Left="10" Canvas.Top="10"  Width="60" Height="35" Content="x" FontSize="16"></Button>
+            <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=Main}" Canvas.Left="10" Canvas.Top="10"  Width="40" Height="32.5" Content="x" FontSize="16"></Button>
         </Canvas>
         <Image Grid.Row="1" Source="/View/Resources/Covid19Icon.png"/>
         <Border Grid.Row="2" Background="White" CornerRadius="10" Height="225" Width="300">

@@ -42,10 +42,20 @@ namespace Covid19TrackerLibrary.ViewModel
         }
         #endregion
 
+        #region GetTheLatestDataCommand
+        public ICommand GetTheLatestData { get; set; }
+        public bool CanGetTheLatestDataExecute(object sender) => !string.IsNullOrEmpty(country);
+        public void GetTheLatestDataExecute(object sender)
+        {
+
+        }
+        #endregion
+
         #region Constructor
         public MainViewModel()
         {
             GetDataByCountry = new ActionCommand(GetDataByCountryExecute, CanGetDataByCountryExecute);
+            GetTheLatestData = new ActionCommand(GetTheLatestDataExecute, CanGetTheLatestDataExecute);
             Close = new RelayCommand<Window>(CloseWindow);
         }
         #endregion

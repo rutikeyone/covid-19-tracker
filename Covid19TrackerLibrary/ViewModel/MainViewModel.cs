@@ -44,7 +44,7 @@ namespace Covid19TrackerLibrary.ViewModel
 
         #region GetTheLatestDataCommand
         public ICommand GetTheLatestData { get; set; }
-        public bool CanGetTheLatestDataExecute(object sender) => !string.IsNullOrEmpty(country);
+        public bool CanGetTheLatestDataExecute(object sender) => true;
         public void GetTheLatestDataExecute(object sender)
         {
 

@@ -1,0 +1,9 @@
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\bin\Debug\netcoreapp3.1\Covid19TrackerLibrary.deps.json
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\bin\Debug\netcoreapp3.1\Covid19TrackerLibrary.dll
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\bin\Debug\netcoreapp3.1\Covid19TrackerLibrary.pdb
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\obj\Debug\netcoreapp3.1\Covid19TrackerLibrary.csprojAssemblyReference.cache
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\obj\Debug\netcoreapp3.1\Covid19TrackerLibrary.AssemblyInfoInputs.cache
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\obj\Debug\netcoreapp3.1\Covid19TrackerLibrary.AssemblyInfo.cs
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\obj\Debug\netcoreapp3.1\Covid19TrackerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\obj\Debug\netcoreapp3.1\Covid19TrackerLibrary.dll
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19TrackerLibrary\obj\Debug\netcoreapp3.1\Covid19TrackerLibrary.pdb

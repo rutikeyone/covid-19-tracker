@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19Tracker", "Covid19Tracker\Covid19Tracker.csproj", "{4CA5C81A-520D-4946-8276-E2E5C0979F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covid19TrackerLibrary", "Covid19TrackerLibrary\Covid19TrackerLibrary.csproj", "{707FB885-D454-4BA3-B67D-F2292C372C39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CA5C81A-520D-4946-8276-E2E5C0979F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA5C81A-520D-4946-8276-E2E5C0979F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA5C81A-520D-4946-8276-E2E5C0979F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA5C81A-520D-4946-8276-E2E5C0979F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707FB885-D454-4BA3-B67D-F2292C372C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707FB885-D454-4BA3-B67D-F2292C372C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707FB885-D454-4BA3-B67D-F2292C372C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707FB885-D454-4BA3-B67D-F2292C372C39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D2B3B8F-836D-4DB9-B09B-CB10F2A4BCC3}
+	EndGlobalSection
+EndGlobal

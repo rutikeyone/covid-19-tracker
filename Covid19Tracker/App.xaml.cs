@@ -14,7 +14,8 @@ namespace Covid19Tracker
         {
             displayRootRegistry = new DisplayRootRegistry();
             displayRootRegistry.RegistryWindowType<MainViewModel, MainWindow>();
-            displayRootRegistry.RegistryWindowType<DataViewModel, DataWindow>();
+            displayRootRegistry.RegistryWindowType<TheLatestDataViewModel, TheLatestData>();
+            displayRootRegistry.RegistryWindowType<TheLatestDataByCountryViewModel, TheLatestDataByCountry>();
         }
 
         protected override async void OnStartup(StartupEventArgs e)
@@ -22,7 +23,6 @@ namespace Covid19Tracker
             base.OnStartup(e);
             MainWindowViewModel = new MainViewModel();
             await displayRootRegistry.ShowModalPresendation(MainWindowViewModel);
-            Shutdown();
 
         }
     }

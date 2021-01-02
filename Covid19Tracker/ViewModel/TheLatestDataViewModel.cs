@@ -3,7 +3,7 @@ using System;
 
 namespace Covid19Tracker.ViewModel
 {
-    public class DataViewModel : BaseViewModel
+    public class TheLatestDataViewModel : BaseViewModel
     {
         
     }

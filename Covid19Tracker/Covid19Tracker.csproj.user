@@ -7,15 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="View\DataWindow.xaml.cs">
+    <Compile Update="View\TheLatestData.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\TheLatestDataByCountry.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="View\DataWindow.xaml">
+    <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\MainWindow.xaml">
+    <Page Update="View\TheLatestData.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\TheLatestDataByCountry.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

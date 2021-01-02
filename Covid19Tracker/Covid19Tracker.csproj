@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="View\Covid19Icon.png" />
+    <None Remove="View\WorldMap.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <Resource Include="View\Resources\Covid19Icon.png" />
+    <Resource Include="View\Resources\WorldMap.jpg" />
   </ItemGroup>
 
 </Project>

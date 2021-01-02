@@ -41,17 +41,21 @@ namespace Covid19Tracker.ViewModel
         public bool CanGetDataByCountryExecute(object sender) => !string.IsNullOrEmpty(country);
         public void GetDataByCountryExecute(object sender)
         {
-          
+            DisplayRootRegistry.ShowPresentation(new TheLatestDataByCountryViewModel());
+            if(sender is Window)
+            {
+                (sender as Window).Close();
+            }
         }
         #endregion
 
         #region GetTheLatestDataCommand
-        public ICommand GetTheLatestData { get; set; }
-        public bool CanGetTheLatestDataExecute(object sender) => true;
-        public void GetTheLatestDataExecute(object sender)
+        public RelayCommand<Window> GetTheLatestData { get; set; }
+        public void GetTheLatestDataExecute(Window window)
         {
-            DisplayRootRegistry.ShowPresentation(new DataViewModel());
-            
+            DisplayRootRegistry.ShowPresentation(new TheLatestDataViewModel());
+            if (window != null)
+                window.Close();
         } 
         #endregion
 
@@ -59,7 +63,7 @@ namespace Covid19Tracker.ViewModel
         public MainViewModel()
         {
             GetDataByCountry = new ActionCommand(GetDataByCountryExecute, CanGetDataByCountryExecute);
-            GetTheLatestData = new ActionCommand(GetTheLatestDataExecute, CanGetTheLatestDataExecute);
+            GetTheLatestData = new RelayCommand<Window>(GetTheLatestDataExecute);
             Close = new RelayCommand<Window>(CloseWindow);
             DisplayRootRegistry = (Application.Current as App).displayRootRegistry;
         }

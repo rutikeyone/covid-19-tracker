@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\App.xaml
-2-873094569
+3969246440
 
-7-745600832
+9-1701974895
 2021886573530
-View\DataWindow.xaml;View\MainWindow.xaml;
+View\MainWindow.xaml;View\TheLatestData.xaml;View\TheLatestDataByCountry.xaml;
 
 False
 

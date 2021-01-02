@@ -13,11 +13,11 @@ using System.Windows.Shapes;
 namespace Covid19Tracker.View
 {
     /// <summary>
-    /// Логика взаимодействия для DataWindow.xaml
+    /// Логика взаимодействия для TheLatestData.xaml
     /// </summary>
-    public partial class DataWindow : Window
+    public partial class TheLatestData : Window
     {
-        public DataWindow()
+        public TheLatestData()
         {
             InitializeComponent();
         }

@@ -64,3 +64,5 @@ C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.genruntimeconfig.cache
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.g.cs
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.baml
+C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.g.cs
+C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.baml

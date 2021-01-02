@@ -1,4 +1,5 @@
 ﻿using Covid19TrackerLibrary.Model.Commands;
+using Covid19TrackerLibrary.Model.Windows;
 using Covid19TrackerLibrary.ViewModel.Base;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
@@ -48,7 +49,7 @@ namespace Covid19TrackerLibrary.ViewModel
         public void GetTheLatestDataExecute(object sender)
         {
 
-        }
+        } 
         #endregion
 
         #region Constructor

@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Covid19Tracker"
-        xmlns:mainviewmodel="clr-namespace:Covid19TrackerLibrary.ViewModel;assembly=Covid19TrackerLibrary"
+        xmlns:mainviewmodel="clr-namespace:Covid19Tracker.ViewModel"
         mc:Ignorable="d"
         Height="600" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF4C1F6F">
     <Window.DataContext>
@@ -21,7 +21,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Canvas Grid.Row="0">
-            <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=Main}" Canvas.Left="10" Canvas.Top="10"  Width="40" Height="32.5" Content="x" FontSize="16"></Button>
+            <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=Main}" Canvas.Left="10" Canvas.Top="10"  Width="40" Height="35" Content="x" FontSize="16"></Button>
         </Canvas>
         <Image Grid.Row="1" Source="/View/Resources/Covid19Icon.png"/>
         <Border Grid.Row="2" Background="White" CornerRadius="10" Height="225" Width="300">

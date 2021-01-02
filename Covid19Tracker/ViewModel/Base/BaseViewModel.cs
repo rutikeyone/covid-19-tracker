@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace Covid19TrackerLibrary.ViewModel.Base
+namespace Covid19Tracker.ViewModel.Base
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

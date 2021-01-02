@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Covid19Tracker.View"
-        xmlns:dataviewmodel="clr-namespace:Covid19TrackerLibrary.ViewModel;assembly=Covid19TrackerLibrary"
+        xmlns:dataviewmodel="clr-namespace:Covid19Tracker.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Height="600" Width="450" Background="#FF4C1F6F">
     <Window.DataContext>

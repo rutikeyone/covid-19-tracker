@@ -1,14 +1,16 @@
 ﻿using Covid19TrackerLibrary.Model.Commands;
 using Covid19TrackerLibrary.Model.Windows;
-using Covid19TrackerLibrary.ViewModel.Base;
+using Covid19Tracker.ViewModel.Base;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Covid19TrackerLibrary.ViewModel
+namespace Covid19Tracker.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
+        private DisplayRootRegistry DisplayRootRegistry;
+
         #region Text Ui
 
         #region CountryText
@@ -48,7 +50,8 @@ namespace Covid19TrackerLibrary.ViewModel
         public bool CanGetTheLatestDataExecute(object sender) => true;
         public void GetTheLatestDataExecute(object sender)
         {
-
+            DisplayRootRegistry.ShowPresentation(new DataViewModel());
+            
         } 
         #endregion
 
@@ -58,6 +61,7 @@ namespace Covid19TrackerLibrary.ViewModel
             GetDataByCountry = new ActionCommand(GetDataByCountryExecute, CanGetDataByCountryExecute);
             GetTheLatestData = new ActionCommand(GetTheLatestDataExecute, CanGetTheLatestDataExecute);
             Close = new RelayCommand<Window>(CloseWindow);
+            DisplayRootRegistry = (Application.Current as App).displayRootRegistry;
         }
         #endregion
     }

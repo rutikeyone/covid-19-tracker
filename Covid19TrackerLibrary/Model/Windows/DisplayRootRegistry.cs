@@ -26,6 +26,16 @@ namespace Covid19TrackerLibrary.Model.Windows
             ViewModelWindowsMapping[ViewModelType] = typeof(Win);
         }
 
+        public void UnregistryWindowType<ViewModel>()
+        {
+            Type ViewModelType = typeof(ViewModel);
+            if (ViewModelType.IsInterface)
+                throw new Exception("Cannot registry interfaces");
+            if (ViewModelWindowsMapping.ContainsKey(ViewModelType))
+                throw new Exception($"Type is already registred");
+            ViewModelWindowsMapping.Remove(ViewModelType);
+        }
+
         public Window CreateWindowInstanceWithViewModel(object viewModel)
         {
             if (viewModel == null)
@@ -56,6 +66,16 @@ namespace Covid19TrackerLibrary.Model.Windows
             Window Window = CreateWindowInstanceWithViewModel(viewModel);
             Window.Show();
             OpenWindows[viewModel] = Window;
+        }
+        
+        public void HidePresentation(object viewModel)
+        {
+            Window window;
+            if (!OpenWindows.TryGetValue(viewModel, out window))
+                throw new InvalidOperationException("UI for this VM is not displayed");
+            window.Close();
+            OpenWindows.Remove(viewModel);
+
         }
     }
 }

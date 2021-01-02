@@ -66,3 +66,4 @@ C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcore
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.baml
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.g.cs
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\DataWindow.baml
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs

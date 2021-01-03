@@ -78,3 +78,9 @@ C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\OtherIcons\RecoveredIcon.png
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\OtherIcons\DeathsIcon.png
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\WorldMapByCountry.jpg
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\OtherIcons\ConfirmedIcon.png
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\OtherIcons\DeathsIcon.png
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\OtherIcons\RecoveredIcon.png
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\WorldMapByCountry.jpg
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker_Content.g.cs
+C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\StylesDictionary.baml

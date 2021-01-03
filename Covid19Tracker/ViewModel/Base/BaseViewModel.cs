@@ -21,5 +21,33 @@ namespace Covid19Tracker.ViewModel.Base
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
+
+        private string country = null;
+        public string Country
+        {
+            get => country;
+            set => SetProperty(ref country, value);
+        }
+
+        private string confirmedValue = null;
+        public string ConfirmedValue
+        {
+            get => confirmedValue;
+            set => SetProperty(ref confirmedValue, value);
+        }
+
+        private string recoveredValue = null;
+        public string RecoveredValue
+        {
+            get => recoveredValue;
+            set => SetProperty(ref recoveredValue, value);
+        }
+
+        private string deathsValue = null;
+        public string DeathsValue
+        {
+            get => deathsValue;
+            set => SetProperty(ref deathsValue, value);
+        }
     }
 }

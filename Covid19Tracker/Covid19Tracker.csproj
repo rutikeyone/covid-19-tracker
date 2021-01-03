@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <None Remove="View\Covid19Icon.png" />
+    <None Remove="View\Resources\OtherIcons\ConfirmedIcon.png" />
+    <None Remove="View\Resources\OtherIcons\DeathsIcon.png" />
+    <None Remove="View\Resources\OtherIcons\RecoveredIcon.png" />
     <None Remove="View\WorldMap.jpg" />
   </ItemGroup>
 
@@ -21,6 +24,15 @@
 
   <ItemGroup>
     <Resource Include="View\Resources\Covid19Icon.png" />
+    <Content Include="View\Resources\OtherIcons\ConfirmedIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Resources\OtherIcons\DeathsIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="View\Resources\OtherIcons\RecoveredIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="View\Resources\WorldMap.jpg" />
   </ItemGroup>
 

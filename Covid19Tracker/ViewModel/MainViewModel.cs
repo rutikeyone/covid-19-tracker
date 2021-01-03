@@ -4,10 +4,11 @@ using Covid19Tracker.ViewModel.Base;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using System.Windows.Input;
+using Covid19TrackerLibrary.Model.Commands.Interfaces;
 
 namespace Covid19Tracker.ViewModel
 {
-    public class MainViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel, ICloseCommand
     {
         private DisplayRootRegistry DisplayRootRegistry;
 
@@ -43,9 +44,8 @@ namespace Covid19Tracker.ViewModel
         {
             DisplayRootRegistry.ShowPresentation(new TheLatestDataByCountryViewModel());
             if(sender is Window)
-            {
-                (sender as Window).Close();
-            }
+              (sender as Window).Close();
+            
         }
         #endregion
 

@@ -11,5 +11,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/othericons/confirmedicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/othericons/deathsicon.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/othericons/recoveredicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/resources/worldmapbycountry.jpg")]
 
 

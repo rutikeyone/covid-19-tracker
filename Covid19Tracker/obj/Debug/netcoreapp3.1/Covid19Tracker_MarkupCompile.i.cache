@@ -11,10 +11,10 @@ false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\App.xaml
 41390137401
-31672424839
+4-892406593
 10-921490943
 202-17402592
 StylesDictionary.xaml;View\MainWindow.xaml;View\TheLatestData.xaml;View\TheLatestDataByCountry.xaml;
 
-True
+False
 

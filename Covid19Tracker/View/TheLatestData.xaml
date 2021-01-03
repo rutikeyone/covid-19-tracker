@@ -23,9 +23,9 @@
             <Button Command="{Binding Back}" CommandParameter="{Binding ElementName=TheLatest}" Canvas.Left="10" Canvas.Top="10"  Width="80" Height="35" Content="Back" FontSize="16"></Button>
             <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=TheLatest}" Canvas.Right="10" Canvas.Top="10"  Width="40" Height="35" Content="x" FontSize="16"></Button>
         </Canvas>
-        <Grid Grid.Row="1" Height="285" Width="350">
+        <Grid Grid.Row="1" Height="285" Width="300">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="100"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -39,11 +39,16 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Source="Resources/OtherIcons/ConfirmedIcon.png"/>
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="Confirmed cases is" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="17.5"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1" Text="Confirmed cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Text="0" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
             <GridSplitter Grid.Row="2"/>
             <Image Grid.Row="3" Grid.Column="0"  Grid.RowSpan="2" Source="Resources/OtherIcons/RecoveredIcon.png"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" Text="Recovered cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" Text="0" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
             <GridSplitter Grid.Row="5"/>
             <Image Grid.Row="6" Grid.Column="0"  Grid.RowSpan="2" Source="Resources/OtherIcons/DeathsIcon.png"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" Text="Deaths cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" Text="0" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
         </Grid>
     </Grid>
 </Window>

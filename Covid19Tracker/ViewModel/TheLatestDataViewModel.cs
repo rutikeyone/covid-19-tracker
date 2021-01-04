@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 namespace Covid19Tracker.ViewModel
 {
-    public class TheLatestDataViewModel : BaseViewModel, ICloseCommand, IBackCommand
+    public class TheLatestDataViewModel : BaseLatestData, ICloseCommand, IBackCommand
     {
         private DisplayRootRegistry DisplayRootRegistry;
         public ICommand Back { get; set; }

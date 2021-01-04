@@ -23,9 +23,9 @@
             <Button Command="{Binding Back}" CommandParameter="{Binding ElementName=ByCountry}" Canvas.Left="10" Canvas.Top="10"  Width="80" Height="35" Content="Back" Background="#4C1F6F" FontSize="16"></Button>
             <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=ByCountry}" Canvas.Right="10" Canvas.Top="10"  Width="40" Height="35" Content="x" Background="#4C1F6F" FontSize="16"></Button>
             <Border CornerRadius="15" Height="160" Width="250" Background="#4C1F6F" Canvas.Left="107.5" Canvas.Top="67.5">
-                <Canvas>
-                    <TextBlock Canvas.Left="10" Canvas.Top="20" Text="Country:" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"></TextBlock>
-                    <TextBlock Canvas.Left="25" Canvas.Top="60" Text="Country:" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="60"></TextBlock>
+                <Canvas Height="150">
+                    <TextBlock Canvas.Left="10" Canvas.Top="10" Text="Country:" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"></TextBlock>
+                    <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Canvas.Left="25" Canvas.Top="40" Text="{Binding Country, UpdateSourceTrigger=PropertyChanged}" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="45" Width="200"></TextBlock>
                 </Canvas>
             </Border>
         </Canvas>

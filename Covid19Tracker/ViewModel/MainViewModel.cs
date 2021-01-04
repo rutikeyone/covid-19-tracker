@@ -5,25 +5,18 @@ using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using System.Windows.Input;
 using Covid19TrackerLibrary.Model.Commands.Interfaces;
+using System;
+using Covid19TrackerLibrary.Model.Covid19API;
+using System.Threading.Tasks;
 
 namespace Covid19Tracker.ViewModel
 {
     public class MainViewModel : BaseViewModel, ICloseCommand
     {
         private DisplayRootRegistry DisplayRootRegistry;
+        private TheLatestDataByCountryViewModel TheByCountry;
+        private Action<string> OpenByCountryEvent;
 
-        #region Text Ui
-
-        #region CountryText
-        private string country = null;
-        public string Country
-        {
-            get => country;
-            set => SetProperty(ref country, value);
-        }
-        #endregion
-
-        #endregion
 
         #region Close command
         public RelayCommand<Window> Close { get; set; }
@@ -39,12 +32,13 @@ namespace Covid19Tracker.ViewModel
 
         #region GetDataByCountyCommand
         public ICommand GetDataByCountry { get; set; }
-        public bool CanGetDataByCountryExecute(object sender) => !string.IsNullOrEmpty(country);
+        public bool CanGetDataByCountryExecute(object sender) => !string.IsNullOrEmpty(Country);
         public void GetDataByCountryExecute(object sender)
         {
-            DisplayRootRegistry.ShowPresentation(new TheLatestDataByCountryViewModel());
-            if(sender is Window)
-              (sender as Window).Close();
+                DisplayRootRegistry.ShowPresentation(TheByCountry);
+                OpenByCountryEvent?.Invoke(Country);
+                if (sender is Window)
+                    (sender as Window).Close();
             
         }
         #endregion
@@ -62,6 +56,8 @@ namespace Covid19Tracker.ViewModel
         #region Constructor
         public MainViewModel()
         {
+            TheByCountry = new TheLatestDataByCountryViewModel();
+            OpenByCountryEvent += TheByCountry.SetCountry;
             GetDataByCountry = new ActionCommand(GetDataByCountryExecute, CanGetDataByCountryExecute);
             GetTheLatestData = new RelayCommand<Window>(GetTheLatestDataExecute);
             Close = new RelayCommand<Window>(CloseWindow);

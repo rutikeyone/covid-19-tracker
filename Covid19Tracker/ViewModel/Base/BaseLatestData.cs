@@ -4,25 +4,25 @@ namespace Covid19Tracker.ViewModel.Base
 {
     public class BaseLatestData : BaseViewModel
     {
-        protected string confirmedValue = null;
+        protected string _confirmedValue = null;
         public string ConfirmedValue
         {
-            get => confirmedValue;
-            set => SetProperty(ref confirmedValue, value);
+            get => _confirmedValue;
+            set => SetProperty(ref _confirmedValue, value);
         }
 
-        protected string recoveredValue = null;
+        protected string _recoveredValue = null;
         public string RecoveredValue
         {
-            get => recoveredValue;
-            set => SetProperty(ref recoveredValue, value);
+            get => _recoveredValue;
+            set => SetProperty(ref _recoveredValue, value);
         }
 
-        protected string deathsValue = null;
+        protected string _deathsValue = null;
         public string DeathsValue
         {
-            get => deathsValue;
-            set => SetProperty(ref deathsValue, value);
+            get => _deathsValue;
+            set => SetProperty(ref _deathsValue, value);
         }
     }
 }

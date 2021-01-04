@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Iu/yz4cjxEUgHEqmGPf3ke+weOyLnxCK5UW+wQpUBOPePtA9WPqvS7SGTCGHSJFFxWeLn+7DMVPDTlHTEBE1Mg==",
+  "dgSpecHash": "e3EeIhmlIX0UzPZdseMGzkodqbI7Y1EifbFG2y8jF0toV9muqOS69WLcz2ZR9w+4/NLpaYBB2x9Vd7vjT182FA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dart\\.nuget\\packages\\covidsharp\\1.3.0\\covidsharp.1.3.0.nupkg.sha512",
+    "C:\\Users\\Dart\\.nuget\\packages\\covid19tracker.net\\2.0.2\\covid19tracker.net.2.0.2.nupkg.sha512",
     "C:\\Users\\Dart\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
     "C:\\Users\\Dart\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
     "C:\\Users\\Dart\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\Dart\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Dart\\.nuget\\packages\\restsharp\\106.10.1\\restsharp.106.10.1.nupkg.sha512"
+    "C:\\Users\\Dart\\.nuget\\packages\\restsharp\\106.11.3\\restsharp.106.11.3.nupkg.sha512"
   ],
   "logs": [
     {

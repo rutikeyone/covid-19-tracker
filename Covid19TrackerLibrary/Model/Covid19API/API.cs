@@ -1,22 +1,36 @@
 ﻿using System;
-using CovidSharp;
+using System.Collections.Generic;
+using System.Windows;
+using Covid19Tracker.Services;
+using Covid19TrackerModels;
 
 namespace Covid19TrackerLibrary.Model.Covid19API
 {
     public class API
     {
-        public void GetTheLatestData(CoronavirusData data, ref string latestConfimed, ref string latestRecovered, ref string latestDeaths)
+        private APIWorkByCountry APIByCountry;
+        private APIWorkByGlobal APIByGlobal;
+        public API()
         {
-            latestConfimed = data.LatestConfirmed();
-            latestRecovered = data.LatestRecovered();
-            latestDeaths = data.LatestDeaths();
+            APIByCountry = new APIWorkByCountry();
+            APIByGlobal = new APIWorkByGlobal();
         }
 
-        public void GetTheLatestDataFromCountryNamePopulation(CoronavirusData data, string country, ref string latestConfimed, ref string latestRecovered, ref string latestDeaths)
+        public void GetAllDataByCountry(string country, ref string confirmedAll, ref string recoveredAll, ref string deathsAll)
         {
-            latestConfimed = data.FromCountryNameConfirmed(country);
-            latestRecovered = data.FromCountryNameRecovered(country);
-            latestDeaths = data.FromCountryNameDeaths(country);
+            APIByCountry.GetData(country);
+            confirmedAll = APIByCountry.GetConfirmed();
+            recoveredAll = APIByCountry.GetRecovered();
+            deathsAll = APIByCountry.GetDeaths();
+
+        }
+
+        public void GetGlobalData(ref string globalConfirmed, ref string globalRecovered, ref string globalDeaths)
+        {
+            APIByGlobal.GetData();
+            globalConfirmed = APIByGlobal.GetConfirmed();
+            globalRecovered = APIByGlobal.GetRecovered();
+            globalDeaths = APIByGlobal.GetDeaths();
         }
     }
 }

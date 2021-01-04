@@ -36,7 +36,6 @@ C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\Covid19Tracker.runtimeconfig.dev.json
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\Covid19Tracker.dll
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\Covid19Tracker.pdb
-C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\CovidSharp.dll
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\GalaSoft.MvvmLight.Extras.dll
@@ -55,7 +54,6 @@ C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\View\MainWindow.baml
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.g.resources
-C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.csproj.CoreCompileInputs.cache
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.AssemblyInfoInputs.cache
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.AssemblyInfo.cs
 C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.csproj.CopyComplete
@@ -84,3 +82,5 @@ C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcore
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\View\Resources\WorldMapByCountry.jpg
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker_Content.g.cs
 C:\Users\Rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\StylesDictionary.baml
+C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\bin\Debug\netcoreapp3.1\Covid19Tracker.NET.dll
+C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\Covid19Tracker.csproj.CoreCompileInputs.cache

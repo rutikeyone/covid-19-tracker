@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "A3O3FCRfmDXtADOPxld/LWW/oyazIY4++3unBeN5xi2mtnfmnw+Um3a2al2LFO/DXAtqL9jvX+TlPO4h5Ls5fg==",
+  "dgSpecHash": "KABZDNzaVAtfrTrZYUW96zxX9wAAn6fP5yAGqR6kYpG2RGLzqORewjCdOhX/WSGfUoTE9RpcnEm/xdyx0J006g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dart\\.nuget\\packages\\covidsharp\\1.3.0\\covidsharp.1.3.0.nupkg.sha512",
+    "C:\\Users\\Dart\\.nuget\\packages\\covid19tracker.net\\2.0.2\\covid19tracker.net.2.0.2.nupkg.sha512",
     "C:\\Users\\Dart\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\Dart\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Dart\\.nuget\\packages\\restsharp\\106.10.1\\restsharp.106.10.1.nupkg.sha512"
+    "C:\\Users\\Dart\\.nuget\\packages\\restsharp\\106.11.3\\restsharp.106.11.3.nupkg.sha512"
   ],
   "logs": [
     {

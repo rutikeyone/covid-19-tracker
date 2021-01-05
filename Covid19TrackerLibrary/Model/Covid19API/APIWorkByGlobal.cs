@@ -1,36 +1,40 @@
 ﻿using System;
-using Covid19Tracker.Models;
-using Covid19Tracker.Services;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Threading;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.Parts;
 using Covid19TrackerLibrary.Model.Covid19API.Interfaces;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace Covid19TrackerLibrary.Model.Covid19API
 {
-    public class APIWorkByGlobal : IAPIWork<GlobalData>
+    public class APIWorkByGlobal : IAPIWork<Covid19Data>
     {
-        public GlobalData CovidData { get; set; }
-        public APIWorkByGlobal()
-        {
-            CovidData = new GlobalData();
-        }
+        public Covid19Data CovidData { get; set; }
 
-        public async void GetData(string country = null)
+        public void GetData(RestClient client)
         {
-            CovidData = await Covid19TrackerAPI.GetGlobalDataAsync();
+            RestRequest Request = new RestRequest(Method.GET);
+            IRestResponse Response = client.ExecuteAsync(Request).Result;
+            CovidData = JsonConvert.DeserializeObject<Covid19Data>(Response.Content);
         }
 
         public string GetConfirmed()
         {
-            return CovidData.Cases.ToString();
+            return CovidData.Global.TotalConfirmed + " people";
         }
 
         public string GetDeaths()
         {
-            return CovidData.Deaths.ToString();
+            return CovidData.Global.TotalDeaths + " people";
         }
 
         public string GetRecovered()
         {
-            return CovidData.Recovered.ToString();
+            return CovidData.Global.TotalRecovered + " people";
         }
     }
 }

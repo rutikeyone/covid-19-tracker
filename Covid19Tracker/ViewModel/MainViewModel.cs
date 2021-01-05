@@ -8,6 +8,7 @@ using Covid19TrackerLibrary.Model.Commands.Interfaces;
 using System;
 using Covid19TrackerLibrary.Model.Covid19API;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 
 namespace Covid19Tracker.ViewModel
 {

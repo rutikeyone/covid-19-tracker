@@ -40,15 +40,15 @@
             </Grid.RowDefinitions>
             <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Source="Resources/OtherIcons/ConfirmedIcon.png"/>
             <TextBlock VerticalAlignment="Bottom" Grid.Row="0" Grid.Column="1" Text="Confirmed cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
-            <TextBlock VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Text="0" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="1" Text="{Binding ConfirmedValue}" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
             <GridSplitter Grid.Row="2"/>
             <Image Grid.Row="3" Grid.Column="0"  Grid.RowSpan="2" Source="Resources/OtherIcons/RecoveredIcon.png"/>
             <TextBlock VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="1" Text="Recovered cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
-            <TextBlock VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" Text="0" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="4" Grid.Column="1" Text="{Binding RecoveredValue}" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
             <GridSplitter Grid.Row="5"/>
             <Image Grid.Row="6" Grid.Column="0"  Grid.RowSpan="2" Source="Resources/OtherIcons/DeathsIcon.png"/>
             <TextBlock VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" Text="Deaths cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
-            <TextBlock VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" Text="0" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
+            <TextBlock VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" Text="{Binding DeathsValue}" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
         </Grid>
     </Grid>
 </Window>

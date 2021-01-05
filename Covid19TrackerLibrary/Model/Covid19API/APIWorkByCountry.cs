@@ -1,6 +1,7 @@
 ﻿using Covid19Tracker.Services;
 using Covid19TrackerLibrary.Model.Covid19API.Interfaces;
 using Covid19TrackerModels;
+using RestSharp;
 using System;
 using System.Windows;
 
@@ -13,9 +14,9 @@ namespace Covid19TrackerLibrary.Model.Covid19API
         {
             CovidData = new CountryData();
         }
-        public async void GetData(string country = null)
+        public void GetData(RestClient client)
         {
-            CovidData = await Covid19TrackerAPI.GetDataByCountryAsync(country);
+          
         }
 
         public string GetRecovered()

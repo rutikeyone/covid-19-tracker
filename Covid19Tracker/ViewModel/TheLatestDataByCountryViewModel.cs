@@ -13,7 +13,6 @@ namespace Covid19Tracker.ViewModel
     public class TheLatestDataByCountryViewModel : BaseLatestData, ICloseCommand, IBackCommand
     {
         private DisplayRootRegistry DisplayRootRegistry;
-        private API API;
 
         #region Close command
         public RelayCommand<Window> Close { get; set; }
@@ -47,7 +46,7 @@ namespace Covid19Tracker.ViewModel
 
         public void SetCountry(string country)
         {
-            API.GetAllDataByCountry(country, ref _confirmedValue, ref _recoveredValue, ref _deathsValue);
+            API.GetAllDataByCountry(country);
             Country = country;
         }
 

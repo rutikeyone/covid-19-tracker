@@ -12,7 +12,6 @@ namespace Covid19Tracker.ViewModel
     public class TheLatestDataViewModel : BaseLatestData, ICloseCommand, IBackCommand
     {
         private DisplayRootRegistry DisplayRootRegistry;
-        private API API;
 
         public ICommand Back { get; set; }
         public bool CanBackExecute(object sender) => true;
@@ -33,12 +32,10 @@ namespace Covid19Tracker.ViewModel
 
         public TheLatestDataViewModel()
         {
-            API = new API();
-            API.GetGlobalData(ref _confirmedValue, ref _recoveredValue, ref _deathsValue);
+            API.GetGlobalData();
             DisplayRootRegistry = new DisplayRootRegistry();
             Back = new ActionCommand(BackExecute, CanBackExecute);
             Close = new RelayCommand<Window>(CloseWindow);
         }
-
     }
 }

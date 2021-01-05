@@ -14,27 +14,31 @@ namespace Covid19TrackerLibrary.Model.Covid19API
     public class APIWorkByGlobal : IAPIWork<Covid19Data>
     {
         public Covid19Data CovidData { get; set; }
-
-        public void GetData(RestClient client)
+        public event Action<Covid19Data> GotEvent;
+        public async void GetData(RestClient client)
         {
-            RestRequest Request = new RestRequest(Method.GET);
-            IRestResponse Response = client.ExecuteAsync(Request).Result;
-            CovidData = JsonConvert.DeserializeObject<Covid19Data>(Response.Content);
+            await Task.Run(() =>
+            {
+                RestRequest Request = new RestRequest(Method.GET);
+                IRestResponse Response = client.ExecuteAsync(Request).Result;
+                CovidData = JsonConvert.DeserializeObject<Covid19Data>(Response.Content);
+            });
+            GotEvent?.Invoke(CovidData);
         }
 
-        public string GetConfirmed()
+        public string GetConfirmed(Covid19Data covidData)
         {
-            return CovidData.Global.TotalConfirmed + " people";
+            return covidData.Global.TotalConfirmed + " people";
         }
 
-        public string GetDeaths()
+        public string GetDeaths(Covid19Data covidData)
         {
-            return CovidData.Global.TotalDeaths + " people";
+            return covidData.Global.TotalDeaths + " people";
         }
 
-        public string GetRecovered()
+        public string GetRecovered(Covid19Data covidData)
         {
-            return CovidData.Global.TotalRecovered + " people";
+            return covidData.Global.TotalRecovered + " people";
         }
     }
 }

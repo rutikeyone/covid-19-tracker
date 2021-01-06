@@ -1,4 +1,7 @@
-﻿using Covid19TrackerLibrary.Model.Commands;
+﻿using Covid19Tracker.ViewModel.Base.Notify;
+using Covid19TrackerLibrary.Model.Commands;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.ByCountry;
 using Covid19TrackerLibrary.Model.Windows;
 using GalaSoft.MvvmLight.Command;
 using System.Collections.Generic;
@@ -9,7 +12,7 @@ using System.Windows.Input;
 namespace Covid19Tracker.ViewModel.Base
 {
     //Данный класс служит базовым для всех ViewModel
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : NotifyAPI<Covid19Data, Covid19DataByCountry>, INotifyPropertyChanged
     {
         //Поле для взаимодействия с логикой открытия и закрытия окон
         protected DisplayRootRegistry DisplayRootRegistry { get; private set; }

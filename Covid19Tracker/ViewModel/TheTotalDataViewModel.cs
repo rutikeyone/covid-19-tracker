@@ -1,5 +1,6 @@
 ﻿using Covid19Tracker.ViewModel.Base;
 using Covid19TrackerLibrary.Model.Covid19API;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses;
 
 namespace Covid19Tracker.ViewModel
 {

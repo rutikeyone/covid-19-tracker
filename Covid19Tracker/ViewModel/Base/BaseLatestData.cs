@@ -1,4 +1,8 @@
 ﻿using Covid19TrackerLibrary.Model.Covid19API;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses;
+using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.ByCountry;
+using GalaSoft.MvvmLight.Messaging;
+using System.Windows;
 
 namespace Covid19Tracker.ViewModel.Base
 {
@@ -30,6 +34,13 @@ namespace Covid19Tracker.ViewModel.Base
             set => SetProperty(ref _deathsValue, value);
         }
 
+        protected string _statusValue = "Select type data";
+        public string StatusValue
+        {
+            get => _statusValue;
+            set => SetProperty(ref _statusValue, value);
+        }
+
         #endregion
 
         //Простой конструктор который подписывается на событие 
@@ -38,7 +49,9 @@ namespace Covid19Tracker.ViewModel.Base
         public BaseLatestData()
         {
             API = new API();
-            API.GetCasesEvent += SetCases;
+            API.APIByCountry.GotEvent += NotifyByCountry;
+            API.APIByGlobal.GotEvent += GlobalNotify;
+            API.APIByCountry.GotErrorEvent += NotifyError;
         }
 
         #endregion
@@ -54,5 +67,26 @@ namespace Covid19Tracker.ViewModel.Base
         }
 
         #endregion
+
+        public override void GlobalNotify(Covid19Data covidData)
+        {
+            RecoveredValue = API.APIByGlobal.GetRecovered(covidData);
+            ConfirmedValue = API.APIByGlobal.GetConfirmed(covidData);
+            DeathsValue = API.APIByGlobal.GetDeaths(covidData);
+        }
+
+        public override void NotifyByCountry(Covid19DataByCountry covidData)
+        {
+            RecoveredValue = API.APIByCountry.GetRecovered(covidData);
+            ConfirmedValue = API.APIByCountry.GetConfirmed(covidData);
+            DeathsValue = API.APIByCountry.GetDeaths(covidData);
+        }
+
+        public override void NotifyError(string errorMessage)
+        {
+            RecoveredValue = errorMessage;
+            ConfirmedValue = errorMessage;
+            DeathsValue = errorMessage;
+        }
     }
 }

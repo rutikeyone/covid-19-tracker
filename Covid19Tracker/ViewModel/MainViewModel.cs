@@ -5,6 +5,7 @@ using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using System.Windows.Input;
 using System;
+using Covid19TrackerLibrary.Model.Internet;
 
 namespace Covid19Tracker.ViewModel
 {
@@ -14,11 +15,13 @@ namespace Covid19Tracker.ViewModel
         //Данные свойство и событие необходимо для передачи значения страны с новое окно TheLatestDataByCountry
         private TheTotalDataByCountryViewModel TheByCountry { get; set; }
         private event Action<string> OpenByCountryEvent;
+        private bool IsHaveInternetConnection { get; set; }
+        private InternetConnection Internet { get; set; }
 
         //Команда для получения данных о конкретной стране
         #region GetDataByCountyCommand
         public ICommand GetDataByCountry { get; set; }
-        public bool CanGetDataByCountryExecute(object sender) => !string.IsNullOrEmpty(Country);
+        public bool CanGetDataByCountryExecute(object sender) => !string.IsNullOrEmpty(Country) && IsHaveInternetConnection;
         public void GetDataByCountryExecute(object sender)
         {
                 DisplayRootRegistry.ShowPresentation(TheByCountry);
@@ -31,12 +34,13 @@ namespace Covid19Tracker.ViewModel
 
         //Команда для получения всех данных
         #region GetTheTotalDataCommand
-        public RelayCommand<Window> GetTheTotalData { get; set; }
-        public void GetTheTotalDataExecute(Window window)
+        public ICommand GetTheTotalData { get; set; }
+        public bool CanGetTheTotalData(object sender) => IsHaveInternetConnection;
+        public void GetTheTotalDataExecute(object sender)
         {
             DisplayRootRegistry.ShowPresentation(new TheTotalDataViewModel());
-            if (window != null)
-                window.Close();
+            if (sender is Window)
+                (sender as Window).Close();
         } 
         #endregion
 
@@ -45,10 +49,17 @@ namespace Covid19Tracker.ViewModel
 
         public MainViewModel()
         {
+            Internet = new InternetConnection();
             TheByCountry = new TheTotalDataByCountryViewModel();
             OpenByCountryEvent += TheByCountry.SetCountry;
             GetDataByCountry = new ActionCommand(GetDataByCountryExecute, CanGetDataByCountryExecute);
-            GetTheTotalData = new RelayCommand<Window>(GetTheTotalDataExecute);
+            GetTheTotalData = new ActionCommand(GetTheTotalDataExecute, CanGetTheTotalData);
+            IsHaveInternetConnection = Internet.CheckInternetConnection();
+
+            if (!IsHaveInternetConnection)
+            {
+                StatusValue = "Check your internet connection";
+            }
         }
 
         #endregion

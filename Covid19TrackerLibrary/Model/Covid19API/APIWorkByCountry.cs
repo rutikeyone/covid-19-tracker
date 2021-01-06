@@ -15,6 +15,7 @@ namespace Covid19TrackerLibrary.Model.Covid19API
         private List<Covid19DataByCountry> ListCovidData = new List<Covid19DataByCountry>();
         public Covid19DataByCountry CovidData { get; set; }
         public event Action<Covid19DataByCountry> GotEvent;
+        public event Action<string> GotErrorEvent;
 
         //Методы получения данных
         public string GetConfirmed(Covid19DataByCountry covidData)
@@ -37,7 +38,7 @@ namespace Covid19TrackerLibrary.Model.Covid19API
                 }
                 catch
                 {
-
+                    GotErrorEvent?.Invoke("Error receiving data");
                 }
             });
         }

@@ -38,7 +38,6 @@ namespace Covid19Tracker.ViewModel
 
         public TheLatestDataByCountryViewModel()
         {
-            API = new API();
             DisplayRootRegistry = new DisplayRootRegistry();
             Close = new RelayCommand<Window>(CloseWindow);
             Back = new ActionCommand(BackExecute, CanBackExecute);

@@ -6,48 +6,41 @@ using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace Covid19TrackerLibrary.Model.Covid19API
 {
     public class APIWorkByCountry : IAPIWork<Covid19DataByCountry>
     {
-        List<Covid19DataByCountry> ListCovidData = new List<Covid19DataByCountry>();
-
+        private List<Covid19DataByCountry> ListCovidData = new List<Covid19DataByCountry>();
         public Covid19DataByCountry CovidData { get; set; }
         public event Action<Covid19DataByCountry> GotEvent;
         public string GetConfirmed(Covid19DataByCountry covidData)
         {
-            return covidData.Country.Confirmed;
+            return covidData.Confirmed + " people";
         }
 
         public async void GetData(RestClient client)
         {
-            /*RestRequest Request = new RestRequest(Method.GET);
-            IRestResponse Response = client.ExecuteAsync(Request).Result;
-            ListCovidData = JsonConvert.DeserializeObject<List<Covid19DataByCountry>>(Response.Content);
-            for(int i = 0; i < ListCovidData.Count; i++)
-            {
-                MessageBox.Show(ListCovidData[i].Country.Date);
-            }
             await Task.Run(() =>
             {
                 RestRequest Request = new RestRequest(Method.GET);
                 IRestResponse Response = client.ExecuteAsync(Request).Result;
-                CovidData = JsonConvert.DeserializeObject<Covid19DataByCountry>(Response.Content);
+                ListCovidData = JsonConvert.DeserializeObject<List<Covid19DataByCountry>>(Response.Content);
+                CovidData = ListCovidData.Last();
             });
-            GotEvent?.Invoke(CovidData);*/
+            GotEvent?.Invoke(CovidData);
         }
 
         public string GetDeaths(Covid19DataByCountry covidData)
         {
-            return covidData.Country.Deaths;
+            return covidData.Deaths + " people";
         }
 
         public string GetRecovered(Covid19DataByCountry covidData)
         {
-            return covidData.Country.Recovered;
+            return covidData.Recovered + " people";
         }
     }
 }

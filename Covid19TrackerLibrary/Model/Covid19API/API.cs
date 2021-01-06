@@ -50,7 +50,7 @@ namespace Covid19TrackerLibrary.Model.Covid19API
             GlobalConfirmed = APIByGlobal.GetConfirmed(covidData);
             GlobalRecovered = APIByGlobal.GetRecovered(covidData);
             GlobalDeaths = APIByGlobal.GetDeaths(covidData);
-            GetCasesEvent?.Invoke(GlobalConfirmed, GlobalRecovered, GlobalDeaths);
+            GetCasesEvent.Invoke(GlobalConfirmed, GlobalRecovered, GlobalDeaths);
         }
 
         public void CountrySetUIData(Covid19DataByCountry covidData)
@@ -58,7 +58,7 @@ namespace Covid19TrackerLibrary.Model.Covid19API
             GlobalConfirmed = APIByCountry.GetConfirmed(covidData);
             GlobalRecovered = APIByCountry.GetRecovered(covidData);
             GlobalDeaths = APIByCountry.GetDeaths(covidData);
-            GetCasesEvent?.Invoke(GlobalConfirmed, GlobalRecovered, GlobalDeaths);
+            GetCasesEvent.Invoke(GlobalConfirmed, GlobalRecovered, GlobalDeaths);
         }
     }
 }

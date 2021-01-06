@@ -3,6 +3,7 @@ using System;
 
 namespace Covid19TrackerLibrary.Model.Commands
 {
+    //Класс необходимый для реализации базовой логики любой команды, используем этот класс в ViewModel
     public class ActionCommand : BaseCommand
     {
         private readonly Action<object> _Execute;

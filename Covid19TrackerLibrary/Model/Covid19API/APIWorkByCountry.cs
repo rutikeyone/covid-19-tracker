@@ -1,7 +1,5 @@
-﻿using Covid19Tracker.Services;
-using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.ByCountry;
+﻿using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.ByCountry;
 using Covid19TrackerLibrary.Model.Covid19API.Interfaces;
-using Covid19TrackerModels;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -13,9 +11,12 @@ namespace Covid19TrackerLibrary.Model.Covid19API
 {
     public class APIWorkByCountry : IAPIWork<Covid19DataByCountry>
     {
+        //Generic и объект необходимы для десериализации данных
         private List<Covid19DataByCountry> ListCovidData = new List<Covid19DataByCountry>();
         public Covid19DataByCountry CovidData { get; set; }
         public event Action<Covid19DataByCountry> GotEvent;
+
+        //Методы получения данных
         public string GetConfirmed(Covid19DataByCountry covidData)
         {
             return covidData.Confirmed + " people";
@@ -25,12 +26,20 @@ namespace Covid19TrackerLibrary.Model.Covid19API
         {
             await Task.Run(() =>
             {
-                RestRequest Request = new RestRequest(Method.GET);
-                IRestResponse Response = client.ExecuteAsync(Request).Result;
-                ListCovidData = JsonConvert.DeserializeObject<List<Covid19DataByCountry>>(Response.Content);
-                CovidData = ListCovidData.Last();
+                try
+                {
+                    //Десериализация данных
+                    RestRequest Request = new RestRequest(Method.GET);
+                    IRestResponse Response = client.ExecuteAsync(Request).Result;
+                    ListCovidData = JsonConvert.DeserializeObject<List<Covid19DataByCountry>>(Response.Content);
+                    CovidData = ListCovidData.Last();
+                    GotEvent?.Invoke(CovidData);
+                }
+                catch
+                {
+
+                }
             });
-            GotEvent?.Invoke(CovidData);
         }
 
         public string GetDeaths(Covid19DataByCountry covidData)

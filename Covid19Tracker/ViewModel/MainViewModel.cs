@@ -4,33 +4,18 @@ using Covid19Tracker.ViewModel.Base;
 using GalaSoft.MvvmLight.Command;
 using System.Windows;
 using System.Windows.Input;
-using Covid19TrackerLibrary.Model.Commands.Interfaces;
 using System;
-using Covid19TrackerLibrary.Model.Covid19API;
-using System.Threading.Tasks;
-using System.Windows.Threading;
 
 namespace Covid19Tracker.ViewModel
 {
-    public class MainViewModel : BaseViewModel, ICloseCommand
+    //MainViewModel описывает логику работы главного окна(MainWindow)
+    public class MainViewModel : BaseCountryViewModel
     {
-        private DisplayRootRegistry DisplayRootRegistry;
-        private TheLatestDataByCountryViewModel TheByCountry;
-        private Action<string> OpenByCountryEvent;
+        //Данные свойство и событие необходимо для передачи значения страны с новое окно TheLatestDataByCountry
+        private TheTotalDataByCountryViewModel TheByCountry { get; set; }
+        private event Action<string> OpenByCountryEvent;
 
-
-        #region Close command
-        public RelayCommand<Window> Close { get; set; }
-
-        public void CloseWindow(Window window)
-        {
-            if (window != null)
-            {
-                window.Close();
-            }
-        }
-        #endregion
-
+        //Команда для получения данных о конкретной стране
         #region GetDataByCountyCommand
         public ICommand GetDataByCountry { get; set; }
         public bool CanGetDataByCountryExecute(object sender) => !string.IsNullOrEmpty(Country);
@@ -44,26 +29,28 @@ namespace Covid19Tracker.ViewModel
         }
         #endregion
 
-        #region GetTheLatestDataCommand
-        public RelayCommand<Window> GetTheLatestData { get; set; }
-        public void GetTheLatestDataExecute(Window window)
+        //Команда для получения всех данных
+        #region GetTheTotalDataCommand
+        public RelayCommand<Window> GetTheTotalData { get; set; }
+        public void GetTheTotalDataExecute(Window window)
         {
-            DisplayRootRegistry.ShowPresentation(new TheLatestDataViewModel());
+            DisplayRootRegistry.ShowPresentation(new TheTotalDataViewModel());
             if (window != null)
                 window.Close();
         } 
         #endregion
 
+        //Конструктор
         #region Constructor
+
         public MainViewModel()
         {
-            TheByCountry = new TheLatestDataByCountryViewModel();
+            TheByCountry = new TheTotalDataByCountryViewModel();
             OpenByCountryEvent += TheByCountry.SetCountry;
             GetDataByCountry = new ActionCommand(GetDataByCountryExecute, CanGetDataByCountryExecute);
-            GetTheLatestData = new RelayCommand<Window>(GetTheLatestDataExecute);
-            Close = new RelayCommand<Window>(CloseWindow);
-            DisplayRootRegistry = (Application.Current as App).displayRootRegistry;
+            GetTheTotalData = new RelayCommand<Window>(GetTheTotalDataExecute);
         }
+
         #endregion
     }
 }

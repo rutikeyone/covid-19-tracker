@@ -3,6 +3,7 @@ using System.Windows.Input;
 
 namespace Covid19TrackerLibrary.Model.Commands.Base
 {
+    //Класс базовой команды, реализующий ICommand и изпользующийся в других классах
     public abstract class BaseCommand : ICommand
     {
         public event EventHandler CanExecuteChanged

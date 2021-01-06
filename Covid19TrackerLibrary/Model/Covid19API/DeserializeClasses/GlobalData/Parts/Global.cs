@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.Parts
+﻿namespace Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.Parts
 {
+    //Класс необходимый для десериализации данных по всему миру
     public class Global
     {
         public string NewConfirmed { get; set; }

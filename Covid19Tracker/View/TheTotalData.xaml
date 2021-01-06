@@ -1,15 +1,15 @@
-﻿<Window x:Class="Covid19Tracker.View.TheLatestDataByCountry"
-        Name="ByCountry"
+﻿<Window x:Class="Covid19Tracker.View.TheTotalData"
+        Name="TheTotal"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Covid19Tracker.View"
-        xmlns:thelatestdatabycountry="clr-namespace:Covid19Tracker.ViewModel"
+        xmlns:thetotaldataviewmodel="clr-namespace:Covid19Tracker.ViewModel"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Height="600" Width="450" Background="#FF4C1F6F">
     <Window.DataContext>
-        <thelatestdatabycountry:TheLatestDataByCountryViewModel/>
+        <thetotaldataviewmodel:TheTotalDataViewModel/>
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
@@ -18,16 +18,10 @@
         </Grid.RowDefinitions>
         <Canvas Grid.Row="0">
             <Canvas.Background>
-                <ImageBrush Stretch="Fill" ImageSource="/View/Resources/WorldMapByCountry.jpg"/>
+                <ImageBrush Stretch="Fill" ImageSource="/View/Resources/WorldMap.jpg"/>
             </Canvas.Background>
-            <Button Command="{Binding Back}" CommandParameter="{Binding ElementName=ByCountry}" Canvas.Left="10" Canvas.Top="10"  Width="80" Height="35" Content="Back" Background="#4C1F6F" FontSize="16"></Button>
-            <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=ByCountry}" Canvas.Right="10" Canvas.Top="10"  Width="40" Height="35" Content="x" Background="#4C1F6F" FontSize="16"></Button>
-            <Border CornerRadius="15" Height="160" Width="250" Background="#4C1F6F" Canvas.Left="107.5" Canvas.Top="67.5">
-                <Canvas Height="150">
-                    <TextBlock Canvas.Left="10" Canvas.Top="10" Text="Country:" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center" TextWrapping="Wrap" Canvas.Left="25" Canvas.Top="40" Text="{Binding Country, UpdateSourceTrigger=PropertyChanged}" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="45" Width="200"></TextBlock>
-                </Canvas>
-            </Border>
+            <Button Command="{Binding Back}" CommandParameter="{Binding ElementName=TheTotal}" Canvas.Left="10" Canvas.Top="10"  Width="80" Height="35" Content="Back" FontSize="16"></Button>
+            <Button Command="{Binding Close}" CommandParameter="{Binding ElementName=TheTotal}" Canvas.Right="10" Canvas.Top="10"  Width="40" Height="35" Content="x" FontSize="16"></Button>
         </Canvas>
         <Grid Grid.Row="1" Height="285" Width="300">
             <Grid.ColumnDefinitions>
@@ -56,5 +50,5 @@
             <TextBlock VerticalAlignment="Bottom" Grid.Row="6" Grid.Column="1" Text="Deaths cases are" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
             <TextBlock VerticalAlignment="Bottom" Grid.Row="7" Grid.Column="1" Text="{Binding DeathsValue}" FontFamily="Agency FB, Arial" Foreground="#FFFFFF" FontWeight="DemiBold" FontSize="25"/>
         </Grid>
-        </Grid>
+    </Grid>
 </Window>

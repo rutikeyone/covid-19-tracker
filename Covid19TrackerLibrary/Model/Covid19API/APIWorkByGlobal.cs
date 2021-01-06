@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Threading;
 using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses;
-using Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.Parts;
 using Covid19TrackerLibrary.Model.Covid19API.Interfaces;
 using Newtonsoft.Json;
 using RestSharp;
@@ -15,10 +11,13 @@ namespace Covid19TrackerLibrary.Model.Covid19API
     {
         public Covid19Data CovidData { get; set; }
         public event Action<Covid19Data> GotEvent;
+
+        //Методы получения данных
         public async void GetData(RestClient client)
         {
             await Task.Run(() =>
             {
+                //Десериализация данных
                 RestRequest Request = new RestRequest(Method.GET);
                 IRestResponse Response = client.ExecuteAsync(Request).Result;
                 CovidData = JsonConvert.DeserializeObject<Covid19Data>(Response.Content);

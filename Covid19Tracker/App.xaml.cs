@@ -7,17 +7,20 @@ namespace Covid19Tracker
 {
     public partial class App : Application
     {
+        //Объекты необходимые для начальной регистрации
         protected internal DisplayRootRegistry displayRootRegistry;
         private MainViewModel MainWindowViewModel;
 
         public App()
         {
+            //Регистрируем окна
             displayRootRegistry = new DisplayRootRegistry();
             displayRootRegistry.RegistryWindowType<MainViewModel, MainWindow>();
-            displayRootRegistry.RegistryWindowType<TheLatestDataViewModel, TheLatestData>();
-            displayRootRegistry.RegistryWindowType<TheLatestDataByCountryViewModel, TheLatestDataByCountry>();
+            displayRootRegistry.RegistryWindowType<TheTotalDataViewModel, TheTotalData>();
+            displayRootRegistry.RegistryWindowType<TheTotalDataByCountryViewModel, TheTotalDataByCountry>();
         }
 
+        //Переопределяем метод OnStartup
         protected override async void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);

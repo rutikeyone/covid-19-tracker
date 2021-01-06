@@ -39,7 +39,7 @@
                     <TextBox Text="{Binding Country, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Foreground="#FF4C1F6F" FontWeight="DemiBold" FontSize="17.5">
                     </TextBox>
                     <Button Height="37.5" Command="{Binding GetDataByCountry}" CommandParameter="{Binding ElementName=Main}" Grid.Row="1" Content="Get data by country name"/>
-                    <Button Height="37.5" Command="{Binding GetTheLatestData}" CommandParameter="{Binding ElementName=Main}" Grid.Row="2" Content="Get the latest data">
+                    <Button Height="37.5" Command="{Binding GetTheTotalData}" CommandParameter="{Binding ElementName=Main}" Grid.Row="2" Content="Get the latest data">
                     </Button>
                     <Label Content="Select type data" Grid.Row="3" FontWeight="Medium" Foreground="#FF4C1F6F" HorizontalContentAlignment="Center"/>
                 </Grid>

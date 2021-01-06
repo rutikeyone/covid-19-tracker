@@ -2,6 +2,7 @@
 
 namespace Covid19TrackerLibrary.Model.Covid19API.DeserializeClasses.ByCountry
 {
+    //Класс необходимый для десериализации данных по конкретной стране
     public class Covid19DataByCountry
     {
         public string Country { get; set; }

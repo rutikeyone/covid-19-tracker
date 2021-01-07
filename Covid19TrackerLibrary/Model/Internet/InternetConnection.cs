@@ -2,6 +2,7 @@
 
 namespace Covid19TrackerLibrary.Model.Internet
 {
+    //Класс реализующий логику проверки интернет соединения
     public class InternetConnection
     {
         public bool CheckInternetConnection()

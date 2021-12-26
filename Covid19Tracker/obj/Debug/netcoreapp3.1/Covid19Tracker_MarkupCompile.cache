@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\
+C:\Users\rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\obj\Debug\netcoreapp3.1\
 Covid19Tracker
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-C:\Users\Dart\source\repos\Covid19Tracker\Covid19Tracker\App.xaml
-41782466315
-4-892406593
-121826975769
-2021929415351
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\rutikeyone\source\repos\Covid19Tracker\Covid19Tracker\App.xaml
+41368283704
+41881077815
+12-1329193338
+202-1958327272
 StylesDictionary.xaml;View\MainWindow.xaml;View\TheTotalData.xaml;View\TheTotalDataByCountry.xaml;
 
 False

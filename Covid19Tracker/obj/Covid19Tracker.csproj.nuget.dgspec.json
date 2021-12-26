@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj": {}
+    "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj": {
+    "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj",
         "projectName": "Covid19TrackerLibrary",
-        "projectPath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj",
-        "packagesPath": "C:\\Users\\Dart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\obj\\",
+        "projectPath": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj",
+        "packagesPath": "C:\\Users\\rutikeyone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dart\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rutikeyone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,6 +30,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +42,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Covid19Tracker.NET": {
               "target": "Package",
@@ -70,27 +71,26 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj": {
+    "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj",
+        "projectUniqueName": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj",
         "projectName": "Covid19Tracker",
-        "projectPath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj",
-        "packagesPath": "C:\\Users\\Dart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19Tracker\\obj\\",
+        "projectPath": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19Tracker\\Covid19Tracker.csproj",
+        "packagesPath": "C:\\Users\\rutikeyone\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19Tracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dart\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\rutikeyone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -101,9 +101,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj": {
-                "projectPath": "C:\\Users\\Dart\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj"
+              "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj": {
+                "projectPath": "C:\\Users\\rutikeyone\\source\\repos\\Covid19Tracker\\Covid19TrackerLibrary\\Covid19TrackerLibrary.csproj"
               }
             }
           }
@@ -116,6 +117,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MaterialDesignThemes": {
               "target": "Package",
@@ -140,7 +142,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

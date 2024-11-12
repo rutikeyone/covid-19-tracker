@@ -14,7 +14,7 @@ This application allows you to determine the total number of cases of infection,
 
 ## Screenshots
 
-<p align="center">
+<p align="start">
   <img src="https://github.com/RuTiKeyOne/Covid19Tracker/blob/master/doc/Screenshots/1.PNG" width="250"/>
   <img src="https://github.com/RuTiKeyOne/Covid19Tracker/blob/master/doc/Screenshots/2.PNG" width="250"/>
   <img src="https://github.com/RuTiKeyOne/Covid19Tracker/blob/master/doc/Screenshots/3.PNG" width="250"/>

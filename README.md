@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/github/license/IgorVolochay/Face-recognition?style=flat-square&color=blue) &nbsp;
 # Сovid19 Tracker
 This application allows you to determine the total number of cases of infection, the number of recoveries and deaths in the country or around the world.
 

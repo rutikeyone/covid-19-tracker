@@ -4,6 +4,10 @@
 ## Description
 This application allows you to determine the total number of cases of infection, the number of recoveries and deaths in the country or around the world.
 
+## Technologies used
+* `Csharp`;
+* `WPF`.
+
 ## Features
 * `Get total confirmed cases`;
 * `Get total recovered cases`;

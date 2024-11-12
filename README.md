@@ -30,7 +30,7 @@ Before you begin, you should have already downloaded the Visual Studio and set i
 
 ## Building the Code
 
-* `Clone the repository using HTTP: git clone https://github.com/RuTiKeyOne/Covid19Tracker`;
+* `Clone the repository using HTTP: git clone https://github.com/rutikeyone/covid-19-tracker`;
 * `Open Visual Studio`;
 * `Click on 'Open an existing Visual Studio project`;
 * `Browse to the directory where you cloned the repo and click OK`;
